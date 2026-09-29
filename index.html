@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Reino dos Peixes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <nav class="menu">
+
+        <a href="#">INÍCIO</a>
+        <a href="#">SOBRE</a>
+        <a href="#">ESPÉCIES</a>
+        <a href="#">CURIOSIDADES</a>
+        <a href="#">CONTATO</a>
+
+        <span class="lupa">⌕</span>
+        <span class="menu-icon">☰</span>
+
+    </nav>
+
+
+    <!-- CAPA -->
+
+    <section class="capa">
+
+        <div class="texto-principal">
+
+            <h1>
+                O REINO
+                <br>
+                <span>DOS PEIXES</span>
+            </h1>
+
+            <p>
+                Conheça a incrível diversidade de peixes que habitam os
+                oceanos, rios e lagos do nosso planeta. Um mundo cheio de
+                cores, formas e segredos espera por você!
+            </p>
+
+        </div>
+
+
+        <img
+            src="peixe.png"
+            class="peixe"
+            alt="Peixe colorido"
+        >
+
+    </section>
+
+
+    <!-- GERENCIADOR -->
+
+    <main>
+
+        <section class="gerenciador">
+
+            <div class="titulo">
+
+                <p>GERENCIADOR</p>
+
+                <h2>Espécies de Peixes</h2>
+
+                <span>
+                    Cadastre, consulte e remova peixes.
+                </span>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- CADASTRO -->
+
+                <div class="card">
+
+                    <div class="card-titulo">
+
+                        <div class="icone">
+                            
+                        </div>
+
+                        <h3>
+                            Cadastrar peixe
+                        </h3>
+
+                    </div>
+
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Nome do peixe"
+                    >
+
+
+                    <label for="especie">
+                        Espécie
+                    </label>
+
+                    <input
+                        type="text"
+                        id="especie"
+                        placeholder="Espécie do peixe"
+                    >
+
+
+                    <label for="habitat">
+                        Habitat
+                    </label>
+
+                    <input
+                        type="text"
+                        id="habitat"
+                        placeholder="Habitat do peixe"
+                    >
+
+
+                    <button onclick="cadastrar()">
+                        ＋ Cadastrar
+                    </button>
+
+                </div>
+
+
+                <!-- GERENCIAMENTO -->
+
+                <div class="card">
+
+                    <div class="card-titulo">
+
+                        <div class="icone">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Gerenciar peixes
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        class="botao-listar"
+                        onclick="listar()"
+                    >
+                        ☷ &nbsp; Listar todos
+                    </button>
+
+
+                    <label for="busca">
+                        Buscar por nome
+                    </label>
+
+                    <div class="linha">
+
+                        <input
+                            type="text"
+                            id="busca"
+                            placeholder="Digite o nome"
+                        >
+
+                        <button onclick="buscar()">
+                            Buscar
+                        </button>
+
+                    </div>
+
+
+                    <label for="id">
+                        ID para remover
+                    </label>
+
+                    <div class="linha">
+
+                        <input
+                            type="number"
+                            id="id"
+                            placeholder="Digite o ID"
+                        >
+
+                        <button onclick="deletar()">
+                            Deletar por ID
+                        </button>
+
+                    </div>
+
+
+                    <div class="botoes-finais">
+
+                        <button
+                            class="ultimo"
+                            onclick="removerUltimo()"
+                        >
+                            🗑 Remover último
+                        </button>
+
+
+                        <button
+                            class="limpar"
+                            onclick="limparTudo()"
+                        >
+                            🗑 Limpar tudo
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LISTA -->
+
+            <div class="lista-card">
+
+                <div class="lista-topo">
+
+                    <div class="lista-nome">
+
+                        <div class="icone">
+                            
+                        </div>
+
+                        <h3>
+                            Peixes cadastrados
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Total:
+                        <strong id="total">0</strong>
+                    </p>
+
+                </div>
+
+
+                <div id="lista">
+
+                    <p class="vazio">
+                         &nbsp; Nenhum item cadastrado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

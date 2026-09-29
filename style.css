@@ -1,0 +1,669 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   CONFIGURAÇÃO GERAL
+===================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    min-height: 100vh;
+
+    background-color: #021321;
+
+    background-image:
+        linear-gradient(
+            rgba(1, 13, 27, 0.18),
+            rgba(1, 13, 27, 0.35)
+        ),
+        url("fundo.png");
+
+    background-size: cover;
+
+    background-position: center top;
+
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   MENU
+===================================== */
+
+.menu {
+    position: absolute;
+
+    z-index: 20;
+
+    top: 22px;
+
+    left: 18%;
+
+    width: 64%;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 42px;
+
+    background: rgba(67, 132, 183, 0.62);
+
+    border: 1px solid rgba(180, 225, 255, 0.15);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: #75c7ff;
+
+    transform: translateY(-1px);
+}
+
+.lupa {
+    font-size: 23px;
+
+    margin-left: 5px;
+}
+
+.menu-icon {
+    font-size: 18px;
+
+    margin-left: -28px;
+}
+
+
+/* =====================================
+   CAPA
+===================================== */
+
+.capa {
+    position: relative;
+
+    width: 100%;
+
+    height: 560px;
+
+   overflow: visible;
+}
+
+
+/* =====================================
+   TEXTO PRINCIPAL
+===================================== */
+
+.texto-principal {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 9%;
+
+    top: 145px;
+
+    width: 470px;
+}
+
+.texto-principal h1 {
+    font-size: 62px;
+
+    line-height: 0.87;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    text-shadow:
+        3px 4px 7px rgba(0, 0, 0, 0.75);
+}
+
+.texto-principal h1 span {
+    color: #65aef5;
+}
+
+.texto-principal p {
+    width: 390px;
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    text-shadow:
+        1px 2px 5px black;
+}
+
+
+/* =====================================
+   PEIXE
+===================================== */
+
+.peixe {
+    position: absolute;
+    z-index: 4;
+    width: 750px;
+    max-width: 60vw;
+    height: auto;
+    right: 2%;
+    top: 130px;
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.45));
+}
+
+
+/* =====================================
+   GERENCIADOR
+===================================== */
+
+main {
+    position: relative;
+
+    width: 100%;
+
+    background: transparent;
+}
+
+.gerenciador {
+    width: 1000px;
+
+    max-width: 90%;
+
+    margin: auto;
+
+    padding: 5px 0 80px;
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+.titulo {
+    margin-bottom: 22px;
+}
+
+.titulo p {
+    color: #21a9ff;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+
+    font-weight: 900;
+
+    text-shadow:
+        2px 3px 6px black;
+}
+
+.titulo span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #c0d5e7;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.card {
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(9, 57, 91, 0.78),
+            rgba(3, 32, 55, 0.78)
+        );
+
+    border: 1px solid rgba(48, 180, 255, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =====================================
+   TÍTULO DOS CARDS
+===================================== */
+
+.card-titulo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.card-titulo h3 {
+    font-size: 18px;
+}
+
+.icone {
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #1498ed;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 0 15px rgba(20, 152, 237, 0.35);
+}
+
+
+/* =====================================
+   CAMPOS
+===================================== */
+
+.card label {
+    display: block;
+
+    margin-top: 9px;
+
+    margin-bottom: 5px;
+
+    color: #d2e4f1;
+
+    font-size: 12px;
+}
+
+input {
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    color: white;
+
+    background: rgba(1, 20, 37, 0.75);
+
+    border: 1px solid rgba(87, 174, 226, 0.55);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+input::placeholder {
+    color: #7893a7;
+}
+
+input:focus {
+    border-color: #26aaff;
+
+    box-shadow:
+        0 0 8px rgba(38, 170, 255, 0.2);
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+button {
+    height: 37px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #1598ee,
+        #268ddd
+    );
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+
+    filter: brightness(1.12);
+}
+
+.card > button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+.botao-listar {
+    margin-bottom: 2px;
+}
+
+
+/* =====================================
+   LINHAS DE BUSCA
+===================================== */
+
+.linha {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 8px;
+}
+
+.linha button {
+    width: 120px;
+}
+
+
+/* =====================================
+   BOTÕES FINAIS
+===================================== */
+
+.botoes-finais {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.botoes-finais button {
+    margin-top: 0;
+}
+
+.ultimo {
+    background: linear-gradient(
+        90deg,
+        #5553db,
+        #6658e8
+    );
+}
+
+.limpar {
+    background: linear-gradient(
+        90deg,
+        #bd3767,
+        #d34b73
+    );
+}
+
+
+/* =====================================
+   LISTA
+===================================== */
+
+.lista-card {
+    margin-top: 18px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 52, 83, 0.8),
+            rgba(3, 29, 50, 0.8)
+        );
+
+    border: 1px solid rgba(48, 180, 255, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+.lista-topo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.lista-nome {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.lista-nome h3 {
+    font-size: 17px;
+}
+
+.lista-topo > p {
+    color: #5fc1ff;
+
+    font-size: 12px;
+}
+
+.lista-topo strong {
+    color: #20a8ff;
+}
+
+.vazio {
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #a6bfd0;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   PEIXE CADASTRADO
+===================================== */
+
+.peixe-item {
+    margin-top: 12px;
+
+    padding: 13px;
+
+    background: rgba(2, 28, 48, 0.8);
+
+    border-left: 3px solid #20a8ff;
+
+    border-radius: 7px;
+
+    color: #d0e2ef;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        left: 5%;
+
+        width: 90%;
+
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .texto-principal {
+        left: 6%;
+
+        top: 140px;
+    }
+
+    .texto-principal h1 {
+        font-size: 48px;
+    }
+
+    .texto-principal p {
+        font-size: 12px;
+
+        width: 300px;
+    }
+
+    .peixe {
+        width: 450px;
+
+        max-width: none;
+
+        right: -70px;
+
+        top: 100px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+        height: 42px;
+
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 8px;
+    }
+
+    .lupa,
+    .menu-icon {
+        display: none;
+    }
+
+    .capa {
+        height: 620px;
+    }
+
+    .texto-principal {
+        left: 6%;
+
+        top: 120px;
+
+        width: 90%;
+    }
+
+    .texto-principal h1 {
+        font-size: 42px;
+    }
+
+    .peixe {
+        width: 350px;
+
+        right: -80px;
+
+        top: 280px;
+    }
+
+    .gerenciador {
+        max-width: 92%;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+    }
+
+    .linha button {
+        width: 100%;
+    }
+
+    .botoes-finais {
+        grid-template-columns: 1fr;
+    }
+}
